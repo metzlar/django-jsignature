@@ -23,8 +23,8 @@ def draw_signature(data, as_file=False):
         raise ValueError
 
     # Compute box
-    width = max(chain(*[d['x'] for d in drawing])) + 10
-    height = max(chain(*[d['y'] for d in drawing])) + 10
+    width = int(max(chain(*[d['x'] for d in drawing])) + 10)
+    height = int(max(chain(*[d['y'] for d in drawing])) + 10)
 
     # Draw image
     im = Image.new("RGBA", (width*AA, height*AA))
